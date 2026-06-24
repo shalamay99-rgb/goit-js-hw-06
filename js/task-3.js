@@ -1,4 +1,6 @@
-const builder = new StringBuilder(".");
+class StringBuilder {
+    #value;
+
 
 constructor(initialValue) {
   this.#value = initialValue;
@@ -18,7 +20,12 @@ padStart(str) {
 
 padBoth(str) {
     this.#value = str + this.#value + str;
+  }
 }
+
+const builder = new StringBuilder(".");
+
+
 
 console.log(builder.getValue()); // "."
 builder.padStart("^");
